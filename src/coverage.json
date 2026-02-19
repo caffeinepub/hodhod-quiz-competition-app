@@ -1,67 +1,30 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-19T21:26:02.291Z",
+  "generatedAt": "2026-02-19T21:48:33.896Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 3,
-    "implemented": 3,
+    "total": 1,
+    "implemented": 0,
     "items": [
       {
-        "id": "REQ-19",
-        "summary": "Display the correct answer option on the game over screen when the user loses by selecting a wrong answer or running out of time",
-        "status": "implemented",
+        "id": "REQ-22",
+        "summary": "Replace the current background music file with a new, more exciting and thrilling music track that plays continuously throughout the quiz game experience",
+        "status": "missing",
         "plannedFiles": [
-          "frontend/src/types/quiz.ts",
-          "frontend/src/hooks/useQuizGame.ts",
-          "frontend/src/components/GameOverScreen.tsx"
+          "frontend/public/assets/generated/quiz-background-music.mp3"
         ],
-        "matchedFiles": [
-          "frontend/src/types/quiz.ts",
-          "frontend/src/hooks/useQuizGame.ts",
-          "frontend/src/components/GameOverScreen.tsx"
-        ]
-      },
-      {
-        "id": "REQ-20",
-        "summary": "Increase the countdown timer duration from 7 seconds to 12 seconds per question",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/pages/QuizGame.tsx",
-          "frontend/src/components/QuizTimer.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/pages/QuizGame.tsx",
-          "frontend/src/components/QuizTimer.tsx"
-        ]
-      },
-      {
-        "id": "REQ-21",
-        "summary": "Update the welcome screen text to reflect the new 12-second time limit instead of 7 seconds",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/StartScreen.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/StartScreen.tsx"
-        ]
+        "matchedFiles": []
       }
     ]
   },
   "changedFiles": [
     "build-request.json",
     "feature_evidence.json",
-    "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/components/GameOverScreen.tsx",
-    "frontend/src/components/QuizTimer.tsx",
-    "frontend/src/components/StartScreen.tsx",
-    "frontend/src/hooks/useQuizGame.ts",
-    "frontend/src/pages/QuizGame.tsx",
-    "frontend/src/types/quiz.ts",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

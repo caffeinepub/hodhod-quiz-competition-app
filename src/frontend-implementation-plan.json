@@ -1,67 +1,21 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Display correct answer on game over and increase timer to 12 seconds",
+  "title": "Replace background music with more exciting/thrilling track",
   "requirements": [
     {
-      "id": "REQ-19",
-      "summary": "Display the correct answer option on the game over screen when the user loses",
+      "id": "REQ-22",
+      "summary": "Replace the current background music file with a new, more exciting and thrilling music track that plays continuously throughout the quiz game experience",
       "acceptanceCriteria": [
-        "When game over occurs due to wrong answer or timeout, the GameOverScreen component displays the correct answer text",
-        "The correct answer is visually highlighted or clearly labeled in Persian",
-        "The correct answer display is integrated into the existing game over screen layout"
+        "New background music file is more energetic and thrilling in tempo and intensity compared to the current track",
+        "Music loops continuously during gameplay without interruption",
+        "Music maintains consistent volume and quality throughout playback"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/types/quiz.ts",
+          "path": "frontend/public/assets/generated/quiz-background-music.mp3",
           "operation": "modify",
-          "description": "Add correctAnswer field to GameState interface to store the correct answer text when game over occurs"
-        },
-        {
-          "path": "frontend/src/hooks/useQuizGame.ts",
-          "operation": "modify",
-          "description": "Update handleAnswer and handleTimeout functions to store the correct answer text in the gameState when setting game over, using currentQuestion.options[currentQuestion.correctAnswer]"
-        },
-        {
-          "path": "frontend/src/components/GameOverScreen.tsx",
-          "operation": "modify",
-          "description": "Add display of the correct answer below the game over message using the correctAnswer from gameState, with clear Persian label 'جواب درست:' and visually distinct styling using the warm orange/yellow color palette"
-        }
-      ]
-    },
-    {
-      "id": "REQ-20",
-      "summary": "Increase the countdown timer duration from 7 seconds to 12 seconds per question",
-      "acceptanceCriteria": [
-        "Each question displays a 12-second countdown timer instead of 7 seconds",
-        "Timer visual feedback (colors for urgency states) adjusts appropriately for the new duration",
-        "Game over still triggers when timer reaches zero"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/pages/QuizGame.tsx",
-          "operation": "modify",
-          "description": "Change the timer duration prop passed to QuizTimer component from 7 to 12 seconds"
-        },
-        {
-          "path": "frontend/src/components/QuizTimer.tsx",
-          "operation": "modify",
-          "description": "Adjust the urgency state thresholds to work appropriately with 12-second duration (e.g., urgent state when remaining time is less than 3 seconds, warning state when less than 6 seconds)"
-        }
-      ]
-    },
-    {
-      "id": "REQ-21",
-      "summary": "Update the welcome screen text to reflect the new 12-second time limit",
-      "acceptanceCriteria": [
-        "StartScreen component displays '۱۲ ثانیه' instead of '۷ ثانیه' in the time warning text",
-        "All references to the timer duration on the welcome screen are updated to 12 seconds"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/StartScreen.tsx",
-          "operation": "modify",
-          "description": "Update the Persian text in the time warning section to display '۱۲ ثانیه' instead of '۷ ثانیه', ensuring RTL layout is preserved"
+          "description": "Replace the existing background music file with a new, more exciting and thrilling music track. The new track must have higher tempo and intensity to create an energetic and suspenseful atmosphere during the quiz gameplay. Ensure the audio file maintains high quality, loops seamlessly without gaps or clicks at the loop point, and has consistent volume throughout the duration."
         }
       ]
     }
