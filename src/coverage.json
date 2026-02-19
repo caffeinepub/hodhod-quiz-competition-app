@@ -1,72 +1,52 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-19T21:19:31.994Z",
+  "generatedAt": "2026-02-19T21:26:02.291Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 5,
-    "implemented": 5,
+    "total": 3,
+    "implemented": 3,
     "items": [
       {
-        "id": "REQ-14",
-        "summary": "Expand the question pool with significantly more questions for all four categories (country flags, sports, intelligence/math, science/technology) to provide more variety and reduce repetition",
+        "id": "REQ-19",
+        "summary": "Display the correct answer option on the game over screen when the user loses by selecting a wrong answer or running out of time",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/data/questions.ts"
-        ],
-        "matchedFiles": [
-          "frontend/src/data/questions.ts"
-        ]
-      },
-      {
-        "id": "REQ-15",
-        "summary": "Add visual feedback when user selects an answer: display green color/indicator for correct answers and red color/indicator for incorrect answers before transitioning to next question or game over screen",
-        "status": "implemented",
-        "plannedFiles": [
+          "frontend/src/types/quiz.ts",
           "frontend/src/hooks/useQuizGame.ts",
-          "frontend/src/components/QuestionDisplay.tsx",
-          "frontend/src/pages/QuizGame.tsx"
+          "frontend/src/components/GameOverScreen.tsx"
         ],
         "matchedFiles": [
+          "frontend/src/types/quiz.ts",
           "frontend/src/hooks/useQuizGame.ts",
-          "frontend/src/components/QuestionDisplay.tsx",
-          "frontend/src/pages/QuizGame.tsx"
+          "frontend/src/components/GameOverScreen.tsx"
         ]
       },
       {
-        "id": "REQ-16",
-        "summary": "Replace the current background music with a more exciting, thrilling music track that plays continuously throughout the quiz game",
+        "id": "REQ-20",
+        "summary": "Increase the countdown timer duration from 7 seconds to 12 seconds per question",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/pages/QuizGame.tsx"
+          "frontend/src/pages/QuizGame.tsx",
+          "frontend/src/components/QuizTimer.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/pages/QuizGame.tsx"
+          "frontend/src/pages/QuizGame.tsx",
+          "frontend/src/components/QuizTimer.tsx"
         ]
       },
       {
-        "id": "REQ-17",
-        "summary": "Add a celebratory, encouraging sound effect that plays when the user selects the correct answer",
+        "id": "REQ-21",
+        "summary": "Update the welcome screen text to reflect the new 12-second time limit instead of 7 seconds",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/hooks/useQuizGame.ts"
+          "frontend/src/components/StartScreen.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/hooks/useQuizGame.ts"
-        ]
-      },
-      {
-        "id": "REQ-18",
-        "summary": "Add a regretful, disappointing sound effect that plays when the user selects an incorrect answer",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/hooks/useQuizGame.ts"
-        ],
-        "matchedFiles": [
-          "frontend/src/hooks/useQuizGame.ts"
+          "frontend/src/components/StartScreen.tsx"
         ]
       }
     ]
@@ -76,13 +56,12 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/public/assets/generated/correct-answer-sound.mp3",
-    "frontend/public/assets/generated/incorrect-answer-sound.mp3",
-    "frontend/public/assets/generated/quiz-background-music.mp3",
-    "frontend/src/components/QuestionDisplay.tsx",
-    "frontend/src/data/questions.ts",
+    "frontend/src/components/GameOverScreen.tsx",
+    "frontend/src/components/QuizTimer.tsx",
+    "frontend/src/components/StartScreen.tsx",
     "frontend/src/hooks/useQuizGame.ts",
     "frontend/src/pages/QuizGame.tsx",
+    "frontend/src/types/quiz.ts",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

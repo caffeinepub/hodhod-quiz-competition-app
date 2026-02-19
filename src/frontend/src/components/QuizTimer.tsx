@@ -13,7 +13,7 @@ export function QuizTimer({ duration, onExpire, isActive }: QuizTimerProps) {
 
   const percentage = (timeRemaining / duration) * 100;
   const isUrgent = timeRemaining <= 3;
-  const isWarning = timeRemaining <= 5 && timeRemaining > 3;
+  const isWarning = timeRemaining <= 6 && timeRemaining > 3;
 
   return (
     <div className="w-full space-y-3">

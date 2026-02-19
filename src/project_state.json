@@ -1,22 +1,23 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 7,
-  "summary": "Quiz competition app for Hodhod store with 4 multiple-choice questions (country flags, sports, intelligence/math, science/technology), 7-second time limit per question, game over on wrong answer",
+  "projectStateVersion": 9,
+  "summary": "Quiz competition app for Hodhod store with 4 multiple-choice questions (country flags, sports, intelligence/math, science/technology), 12-second time limit per question, game over on wrong answer with correct answer displayed, randomized question selection",
   "architectural_notes": [
     "App branded for Hodhod store",
     "4 sequential questions, one from each category",
-    "7-second countdown timer per question",
     "Instant game termination on incorrect answer",
     "Persian (Farsi) language support throughout UI",
     "Background music for enhanced engagement",
     "Visual feedback system: green for correct answers, red for incorrect answers",
-    "Audio feedback: celebratory sound on correct answer, regretful sound on incorrect answer"
+    "Audio feedback: celebratory sound on correct answer, regretful sound on incorrect answer",
+    "12-second countdown timer per question (increased from 7 seconds)",
+    "Display correct answer when game ends due to incorrect answer",
+    "Random question selection from available question pools"
   ],
   "known_issues": [
     "Incorrect question-answer mappings need verification and correction"
   ],
-  "isFixRequest": true,
-  "imageRequirements": "## Required Images\n- Exciting, thrilling quiz background music track with energetic tempo, 2-3 minutes duration, seamless loop (quiz-background-music.mp3)\n- Celebratory, encouraging sound effect for correct answers, short 1-2 second duration with uplifting tone (correct-answer-sound.mp3)\n- Regretful, disappointing sound effect for incorrect answers, short 1-2 second duration with somber tone (incorrect-answer-sound.mp3)",
+  "isFixRequest": false,
   "existing_features": [
     {
       "id": "feature-create-a-quiz-game-structure-with-exactly-4-sequential-questions-one-from-each-category-country-flags-sports-intelligence-math-and-science-technology",
@@ -111,6 +112,30 @@
       "title": "Add a regretful, disappointing sound effect that plays when the user selects an incorrect answer",
       "reqIds": [
         "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-the-correct-answer-option-on-the-game-over-screen-when-the-user-loses-by-selecting-a-wrong-answer-or-running-out-of-time",
+      "title": "Display the correct answer option on the game over screen when the user loses by selecting a wrong answer or running out of time",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-increase-the-countdown-timer-duration-from-7-seconds-to-12-seconds-per-question",
+      "title": "Increase the countdown timer duration from 7 seconds to 12 seconds per question",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-welcome-screen-text-to-reflect-the-new-12-second-time-limit-instead-of-7-seconds",
+      "title": "Update the welcome screen text to reflect the new 12-second time limit instead of 7 seconds",
+      "reqIds": [
+        "REQ-21"
       ],
       "version": 1
     }
@@ -251,6 +276,24 @@
     {
       "id": "AR-23",
       "summary": "Add regretful/disappointing sound effect when user answers incorrectly",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-24",
+      "summary": "Display the correct answer after user loses/answers incorrectly",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-25",
+      "summary": "Randomize question selection from question pool",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-26",
+      "summary": "Increase time limit per question from 7 seconds to 12 seconds",
       "reqIds": [],
       "status": "pending"
     }

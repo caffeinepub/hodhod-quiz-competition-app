@@ -53,6 +53,7 @@ export function QuizGame() {
       <GameOverScreen
         reason={gameOverReason.type}
         questionNumber={gameOverReason.questionIndex}
+        correctAnswer={gameOverReason.correctAnswer}
         onRestart={startGame}
       />
     );
@@ -94,7 +95,7 @@ export function QuizGame() {
       <main className="container mx-auto px-4 py-8 max-w-4xl">
         <div className="space-y-6">
           <Card className="p-6 border-2 border-primary/20 shadow-lg">
-            <QuizTimer duration={7} onExpire={handleTimeout} isActive={gameState === 'playing' && selectedAnswer === null} />
+            <QuizTimer duration={12} onExpire={handleTimeout} isActive={gameState === 'playing' && selectedAnswer === null} />
           </Card>
 
           <Card className="p-8 border-2 border-primary/10 shadow-lg">

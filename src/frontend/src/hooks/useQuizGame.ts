@@ -94,7 +94,11 @@ export function useQuizGame() {
       setTimeout(() => {
         if (!correct) {
           setGameState('gameOver');
-          setGameOverReason({ type: 'wrongAnswer', questionIndex: currentQuestionIndex });
+          setGameOverReason({ 
+            type: 'wrongAnswer', 
+            questionIndex: currentQuestionIndex,
+            correctAnswer: currentQuestion.options[currentQuestion.correctAnswerIndex]
+          });
         } else {
           // Correct answer
           if (currentQuestionIndex === 3) {
@@ -113,10 +117,14 @@ export function useQuizGame() {
   );
 
   const handleTimeout = useCallback(() => {
-    if (gameState !== 'playing') return;
+    if (gameState !== 'playing' || !currentQuestion) return;
     setGameState('gameOver');
-    setGameOverReason({ type: 'timeout', questionIndex: currentQuestionIndex });
-  }, [currentQuestionIndex, gameState]);
+    setGameOverReason({ 
+      type: 'timeout', 
+      questionIndex: currentQuestionIndex,
+      correctAnswer: currentQuestion.options[currentQuestion.correctAnswerIndex]
+    });
+  }, [currentQuestionIndex, gameState, currentQuestion]);
 
   return {
     gameState,

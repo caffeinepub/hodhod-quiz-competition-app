@@ -1,100 +1,67 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Expand question pool and add answer feedback with sound effects",
+  "title": "Display correct answer on game over and increase timer to 12 seconds",
   "requirements": [
     {
-      "id": "REQ-14",
-      "summary": "Expand question pool with 15-20 questions per category in Persian",
+      "id": "REQ-19",
+      "summary": "Display the correct answer option on the game over screen when the user loses",
       "acceptanceCriteria": [
-        "Each category contains at least 15-20 questions",
-        "All new questions follow the existing Persian language format",
-        "Questions are added to frontend/src/data/questions.ts",
-        "New questions maintain the same structure with text, options array, and correctAnswer index"
+        "When game over occurs due to wrong answer or timeout, the GameOverScreen component displays the correct answer text",
+        "The correct answer is visually highlighted or clearly labeled in Persian",
+        "The correct answer display is integrated into the existing game over screen layout"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/data/questions.ts",
+          "path": "frontend/src/types/quiz.ts",
           "operation": "modify",
-          "description": "Expand all four question arrays (flagQuestions, sportsQuestions, intelligenceQuestions, scienceQuestions) to contain 15-20 questions each in Persian, maintaining the existing Question structure with text, options, correctAnswer, and optional imageUrl fields. Ensure variety and avoid repetition across questions."
-        }
-      ]
-    },
-    {
-      "id": "REQ-15",
-      "summary": "Add visual feedback with green for correct and red for incorrect answers",
-      "acceptanceCriteria": [
-        "When correct answer is clicked, the button shows green visual feedback",
-        "When incorrect answer is clicked, the button shows red visual feedback",
-        "Visual feedback is displayed for at least 1 second before transitioning",
-        "Feedback colors are clearly visible against the existing warm orange/yellow theme"
-      ],
-      "file_operations": [
+          "description": "Add correctAnswer field to GameState interface to store the correct answer text when game over occurs"
+        },
         {
           "path": "frontend/src/hooks/useQuizGame.ts",
           "operation": "modify",
-          "description": "Add state to track the selected answer index and whether it was correct/incorrect. Modify handleAnswer function to set this state and delay the transition to next question or game over by at least 1 second to allow visual feedback display."
+          "description": "Update handleAnswer and handleTimeout functions to store the correct answer text in the gameState when setting game over, using currentQuestion.options[currentQuestion.correctAnswer]"
         },
         {
-          "path": "frontend/src/components/QuestionDisplay.tsx",
+          "path": "frontend/src/components/GameOverScreen.tsx",
           "operation": "modify",
-          "description": "Add props to receive selectedAnswer index and isCorrect boolean. Apply conditional className with green background/border for correct answer and red background/border for incorrect answer when selectedAnswer matches the option index. Ensure colors are visible against the warm orange/yellow theme."
-        },
-        {
-          "path": "frontend/src/pages/QuizGame.tsx",
-          "operation": "modify",
-          "description": "Pass selectedAnswer and isCorrect state from useQuizGame hook to QuestionDisplay component to enable visual feedback display."
+          "description": "Add display of the correct answer below the game over message using the correctAnswer from gameState, with clear Persian label 'جواب درست:' and visually distinct styling using the warm orange/yellow color palette"
         }
       ]
     },
     {
-      "id": "REQ-16",
-      "summary": "Replace background music with exciting, thrilling track",
+      "id": "REQ-20",
+      "summary": "Increase the countdown timer duration from 7 seconds to 12 seconds per question",
       "acceptanceCriteria": [
-        "New background music has an exciting, thrilling energy appropriate for a quiz competition",
-        "Music loops continuously throughout all game states",
-        "Audio file is placed in frontend/public/assets/generated",
-        "Music volume is balanced and not overwhelming"
+        "Each question displays a 12-second countdown timer instead of 7 seconds",
+        "Timer visual feedback (colors for urgency states) adjusts appropriately for the new duration",
+        "Game over still triggers when timer reaches zero"
       ],
       "file_operations": [
         {
           "path": "frontend/src/pages/QuizGame.tsx",
           "operation": "modify",
-          "description": "Update the background music Audio reference to use the new generated audio file at frontend/public/assets/generated/quiz-background-music.dim_WIDTHxHEIGHT.mp3. Ensure the audio is set to loop continuously and volume is balanced (e.g., 0.3-0.5). The music should play throughout all game states."
+          "description": "Change the timer duration prop passed to QuizTimer component from 7 to 12 seconds"
+        },
+        {
+          "path": "frontend/src/components/QuizTimer.tsx",
+          "operation": "modify",
+          "description": "Adjust the urgency state thresholds to work appropriately with 12-second duration (e.g., urgent state when remaining time is less than 3 seconds, warning state when less than 6 seconds)"
         }
       ]
     },
     {
-      "id": "REQ-17",
-      "summary": "Add celebratory sound effect for correct answers",
+      "id": "REQ-21",
+      "summary": "Update the welcome screen text to reflect the new 12-second time limit",
       "acceptanceCriteria": [
-        "Sound effect plays immediately when correct answer is selected",
-        "Sound is celebratory and encouraging in tone",
-        "Sound does not interrupt or stop the background music",
-        "Audio file is placed in frontend/public/assets/generated"
+        "StartScreen component displays '۱۲ ثانیه' instead of '۷ ثانیه' in the time warning text",
+        "All references to the timer duration on the welcome screen are updated to 12 seconds"
       ],
       "file_operations": [
         {
-          "path": "frontend/src/hooks/useQuizGame.ts",
+          "path": "frontend/src/components/StartScreen.tsx",
           "operation": "modify",
-          "description": "Create an Audio instance for the correct answer sound effect using frontend/public/assets/generated/correct-answer-sound.dim_WIDTHxHEIGHT.mp3. Play this sound immediately when handleAnswer is called with the correct answer. Ensure sound volume allows background music to continue playing."
-        }
-      ]
-    },
-    {
-      "id": "REQ-18",
-      "summary": "Add regretful sound effect for incorrect answers",
-      "acceptanceCriteria": [
-        "Sound effect plays immediately when incorrect answer is selected",
-        "Sound is regretful and disappointing in tone",
-        "Sound does not interrupt or stop the background music",
-        "Audio file is placed in frontend/public/assets/generated"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/hooks/useQuizGame.ts",
-          "operation": "modify",
-          "description": "Create an Audio instance for the incorrect answer sound effect using frontend/public/assets/generated/incorrect-answer-sound.dim_WIDTHxHEIGHT.mp3. Play this sound immediately when handleAnswer is called with an incorrect answer. Ensure sound volume allows background music to continue playing."
+          "description": "Update the Persian text in the time warning section to display '۱۲ ثانیه' instead of '۷ ثانیه', ensuring RTL layout is preserved"
         }
       ]
     }

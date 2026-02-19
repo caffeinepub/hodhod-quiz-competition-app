@@ -60,7 +60,7 @@ export function StartScreen({ onStart, isLoading }: StartScreenProps) {
           <div className="flex items-center justify-center gap-2 p-4 bg-warning/10 border border-warning/20 rounded-lg">
             <Clock className="h-5 w-5 text-warning" />
             <p className="text-sm font-bold text-warning">
-              هر سوال فقط ۷ ثانیه زمان دارد!
+              هر سوال فقط ۱۲ ثانیه زمان دارد!
             </p>
           </div>
 

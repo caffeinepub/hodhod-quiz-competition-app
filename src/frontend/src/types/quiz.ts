@@ -10,4 +10,5 @@ export type GameState = 'idle' | 'playing' | 'gameOver' | 'victory';
 export interface GameOverReason {
   type: 'wrongAnswer' | 'timeout';
   questionIndex: number;
+  correctAnswer?: string;
 }
