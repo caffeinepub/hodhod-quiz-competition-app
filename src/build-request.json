@@ -1,0 +1,125 @@
+{
+  "kind": "build_request",
+  "title": "Expand question pool and add answer feedback with sound effects",
+  "projectName": "Hodhod Quiz",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-14",
+      "text": "Expand the question pool with significantly more questions for all four categories (country flags, sports, intelligence/math, science/technology) to provide more variety and reduce repetition",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-last"
+        ],
+        "quotes": [
+          "سوالات و بیشتر کن"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each category contains at least 15-20 questions",
+        "All new questions follow the existing Persian language format",
+        "Questions are added to frontend/src/data/questions.ts",
+        "New questions maintain the same structure with text, options array, and correctAnswer index"
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "text": "Add visual feedback when user selects an answer: display green color/indicator for correct answers and red color/indicator for incorrect answers before transitioning to next question or game over screen",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-last"
+        ],
+        "quotes": [
+          "وقتیم درست یا اشتباه جواب میدهیم با سبز یا قرمز تو اپ"
+        ]
+      },
+      "acceptanceCriteria": [
+        "When correct answer is clicked, the button shows green visual feedback",
+        "When incorrect answer is clicked, the button shows red visual feedback",
+        "Visual feedback is displayed for at least 1 second before transitioning",
+        "Feedback colors are clearly visible against the existing warm orange/yellow theme"
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "text": "Replace the current background music with a more exciting, thrilling music track that plays continuously throughout the quiz game",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-last"
+        ],
+        "quotes": [
+          "آهنگ هیجانی بزار روش"
+        ]
+      },
+      "acceptanceCriteria": [
+        "New background music has an exciting, thrilling energy appropriate for a quiz competition",
+        "Music loops continuously throughout all game states",
+        "Audio file is placed in frontend/public/assets/generated",
+        "Music volume is balanced and not overwhelming"
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "text": "Add a celebratory, encouraging sound effect that plays when the user selects the correct answer",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-last"
+        ],
+        "quotes": [
+          "اچدرست جواب داد آهنگ تشویق"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Sound effect plays immediately when correct answer is selected",
+        "Sound is celebratory and encouraging in tone",
+        "Sound does not interrupt or stop the background music",
+        "Audio file is placed in frontend/public/assets/generated"
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "text": "Add a regretful, disappointing sound effect that plays when the user selects an incorrect answer",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-last"
+        ],
+        "quotes": [
+          "اشتباه جواب داد آهنگ افسوسی چیزی بزار"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Sound effect plays immediately when incorrect answer is selected",
+        "Sound is regretful and disappointing in tone",
+        "Sound does not interrupt or stop the background music",
+        "Audio file is placed in frontend/public/assets/generated"
+      ]
+    }
+  ],
+  "constraints": [
+    "All new questions must be in Persian (Farsi) language",
+    "Maintain the existing warm orange/yellow color scheme inspired by Middle Eastern market aesthetics",
+    "Keep the 7-second timer per question unchanged",
+    "Preserve the existing game flow: 4 sequential questions, one from each category",
+    "Do not modify frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, or frontend/src/components/ui"
+  ],
+  "nonGoals": [
+    "Changing the number of questions per game (remains 4)",
+    "Modifying the timer duration (remains 7 seconds)",
+    "Adding new quiz categories beyond the existing four",
+    "Changing the game over or victory conditions",
+    "Modifying the core UI theme or color palette"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Exciting, thrilling quiz background music track with energetic tempo, 2-3 minutes duration, seamless loop (quiz-background-music.mp3)",
+      "Celebratory, encouraging sound effect for correct answers, short 1-2 second duration with uplifting tone (correct-answer-sound.mp3)",
+      "Regretful, disappointing sound effect for incorrect answers, short 1-2 second duration with somber tone (incorrect-answer-sound.mp3)"
+    ],
+    "edits": []
+  }
+}

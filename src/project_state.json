@@ -1,0 +1,261 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "Quiz competition app for Hodhod store with 4 multiple-choice questions (country flags, sports, intelligence/math, science/technology), 7-second time limit per question, game over on wrong answer",
+  "architectural_notes": [
+    "App branded for Hodhod store",
+    "4 sequential questions, one from each category",
+    "7-second countdown timer per question",
+    "Instant game termination on incorrect answer",
+    "Persian (Farsi) language support throughout UI",
+    "Background music for enhanced engagement",
+    "Visual feedback system: green for correct answers, red for incorrect answers",
+    "Audio feedback: celebratory sound on correct answer, regretful sound on incorrect answer"
+  ],
+  "known_issues": [
+    "Incorrect question-answer mappings need verification and correction"
+  ],
+  "isFixRequest": true,
+  "imageRequirements": "## Required Images\n- Exciting, thrilling quiz background music track with energetic tempo, 2-3 minutes duration, seamless loop (quiz-background-music.mp3)\n- Celebratory, encouraging sound effect for correct answers, short 1-2 second duration with uplifting tone (correct-answer-sound.mp3)\n- Regretful, disappointing sound effect for incorrect answers, short 1-2 second duration with somber tone (incorrect-answer-sound.mp3)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-quiz-game-structure-with-exactly-4-sequential-questions-one-from-each-category-country-flags-sports-intelligence-math-and-science-technology",
+      "title": "Create a quiz game structure with exactly 4 sequential questions, one from each category: country flags, sports, intelligence/math, and science/technology",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-7-second-countdown-timer-for-each-question-that-automatically-ends-the-game-if-time-expires",
+      "title": "Implement a 7-second countdown timer for each question that automatically ends the game if time expires",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-immediate-game-over-with-you-lost-message-when-user-selects-wrong-answer-or-fails-to-answer-within-time-limit",
+      "title": "Implement immediate game over with 'You Lost' message when user selects wrong answer or fails to answer within time limit",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-country-flag-images-for-category-1-questions-as-visual-prompts-with-4-text-based-country-name-options",
+      "title": "Display country flag images for category 1 questions as visual prompts with 4 text-based country name options",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-ui-with-warm-energetic-design-featuring-vibrant-orange-and-yellow-tones-inspired-by-middle-eastern-market-aesthetics-with-bold-typography-for-questions-and-clear-visual-hierarchy-for-the-quiz-interface",
+      "title": "Create a UI with warm, energetic design featuring vibrant orange and yellow tones inspired by Middle Eastern market aesthetics, with bold typography for questions and clear visual hierarchy for the quiz interface",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-convert-all-user-facing-text-in-the-frontend-to-persian-farsi-including-welcome-screen-title-and-descriptions-question-text-and-answer-options-for-all-four-categories-timer-labels-game-over-messages-victory-messages-button-labels-and-category-badges",
+      "title": "Convert all user-facing text in the frontend to Persian (Farsi), including welcome screen title and descriptions, question text and answer options for all four categories, timer labels, game over messages, victory messages, button labels, and category badges",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-exciting-thrilling-background-music-that-loops-continuously-throughout-the-quiz-game-experience-playing-during-question-displays-and-continuing-across-all-game-states",
+      "title": "Add exciting, thrilling background music that loops continuously throughout the quiz game experience, playing during question displays and continuing across all game states",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-expand-the-question-pool-with-significantly-more-questions-for-all-four-categories-country-flags-sports-intelligence-math-science-technology-to-provide-more-variety-and-reduce-repetition",
+      "title": "Expand the question pool with significantly more questions for all four categories (country flags, sports, intelligence/math, science/technology) to provide more variety and reduce repetition",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-visual-feedback-when-user-selects-an-answer-display-green-color-indicator-for-correct-answers-and-red-color-indicator-for-incorrect-answers-before-transitioning-to-next-question-or-game-over-screen",
+      "title": "Add visual feedback when user selects an answer: display green color/indicator for correct answers and red color/indicator for incorrect answers before transitioning to next question or game over screen",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-background-music-with-a-more-exciting-thrilling-music-track-that-plays-continuously-throughout-the-quiz-game",
+      "title": "Replace the current background music with a more exciting, thrilling music track that plays continuously throughout the quiz game",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-celebratory-encouraging-sound-effect-that-plays-when-the-user-selects-the-correct-answer",
+      "title": "Add a celebratory, encouraging sound effect that plays when the user selects the correct answer",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-regretful-disappointing-sound-effect-that-plays-when-the-user-selects-an-incorrect-answer",
+      "title": "Add a regretful, disappointing sound effect that plays when the user selects an incorrect answer",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Quiz game with 4 categories and 7-second timer per question",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Category 1: Country flag image questions with multiple choice answers",
+      "reqIds": [
+        "AR-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Category 2: Sports-related multiple choice questions",
+      "reqIds": [
+        "AR-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Category 3: Intelligence and math multiple choice questions",
+      "reqIds": [
+        "AR-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Category 4: Science and technology multiple choice questions",
+      "reqIds": [
+        "AR-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Large non-repeating question pool for each category",
+      "reqIds": [
+        "AR-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Game over mechanism with 'You Lost' message on wrong answer",
+      "reqIds": [
+        "AR-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Store a large pool of non-repeating multiple-choice questions for category 1 (country flags), where each question shows a flag image and 4 answer options",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Store a large pool of non-repeating sports-related multiple-choice questions for category 2, each with 4 answer options",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Store a large pool of non-repeating intelligence and math multiple-choice questions for category 3, each with 4 answer options",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Store a large pool of non-repeating science and technology multiple-choice questions for category 4, each with 4 answer options",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Convert entire app interface and questions to Persian (Farsi) language",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Add exciting/thrilling background music to the quiz game",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-17",
+      "summary": "Update backend question data to ensure all questions in all four categories (flags, sports, intelligence, science) have correct answer mappings, verifying that the correctAnswer index points to the actual correct option in the options array",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-19",
+      "summary": "Render the generated background music file as a static asset in frontend/public/assets/generated and implement audio playback using HTML5 audio element with autoplay and loop functionality",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-20",
+      "summary": "Expand question pool with more questions for all categories",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-21",
+      "summary": "Add visual feedback: green indicator for correct answers, red indicator for incorrect answers",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-22",
+      "summary": "Add celebratory/encouraging sound effect when user answers correctly",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-23",
+      "summary": "Add regretful/disappointing sound effect when user answers incorrectly",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Hodhod Quiz Competition App",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

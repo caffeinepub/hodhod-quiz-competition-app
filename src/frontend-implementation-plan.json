@@ -1,0 +1,102 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Expand question pool and add answer feedback with sound effects",
+  "requirements": [
+    {
+      "id": "REQ-14",
+      "summary": "Expand question pool with 15-20 questions per category in Persian",
+      "acceptanceCriteria": [
+        "Each category contains at least 15-20 questions",
+        "All new questions follow the existing Persian language format",
+        "Questions are added to frontend/src/data/questions.ts",
+        "New questions maintain the same structure with text, options array, and correctAnswer index"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/data/questions.ts",
+          "operation": "modify",
+          "description": "Expand all four question arrays (flagQuestions, sportsQuestions, intelligenceQuestions, scienceQuestions) to contain 15-20 questions each in Persian, maintaining the existing Question structure with text, options, correctAnswer, and optional imageUrl fields. Ensure variety and avoid repetition across questions."
+        }
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "summary": "Add visual feedback with green for correct and red for incorrect answers",
+      "acceptanceCriteria": [
+        "When correct answer is clicked, the button shows green visual feedback",
+        "When incorrect answer is clicked, the button shows red visual feedback",
+        "Visual feedback is displayed for at least 1 second before transitioning",
+        "Feedback colors are clearly visible against the existing warm orange/yellow theme"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useQuizGame.ts",
+          "operation": "modify",
+          "description": "Add state to track the selected answer index and whether it was correct/incorrect. Modify handleAnswer function to set this state and delay the transition to next question or game over by at least 1 second to allow visual feedback display."
+        },
+        {
+          "path": "frontend/src/components/QuestionDisplay.tsx",
+          "operation": "modify",
+          "description": "Add props to receive selectedAnswer index and isCorrect boolean. Apply conditional className with green background/border for correct answer and red background/border for incorrect answer when selectedAnswer matches the option index. Ensure colors are visible against the warm orange/yellow theme."
+        },
+        {
+          "path": "frontend/src/pages/QuizGame.tsx",
+          "operation": "modify",
+          "description": "Pass selectedAnswer and isCorrect state from useQuizGame hook to QuestionDisplay component to enable visual feedback display."
+        }
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "summary": "Replace background music with exciting, thrilling track",
+      "acceptanceCriteria": [
+        "New background music has an exciting, thrilling energy appropriate for a quiz competition",
+        "Music loops continuously throughout all game states",
+        "Audio file is placed in frontend/public/assets/generated",
+        "Music volume is balanced and not overwhelming"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/QuizGame.tsx",
+          "operation": "modify",
+          "description": "Update the background music Audio reference to use the new generated audio file at frontend/public/assets/generated/quiz-background-music.dim_WIDTHxHEIGHT.mp3. Ensure the audio is set to loop continuously and volume is balanced (e.g., 0.3-0.5). The music should play throughout all game states."
+        }
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "summary": "Add celebratory sound effect for correct answers",
+      "acceptanceCriteria": [
+        "Sound effect plays immediately when correct answer is selected",
+        "Sound is celebratory and encouraging in tone",
+        "Sound does not interrupt or stop the background music",
+        "Audio file is placed in frontend/public/assets/generated"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useQuizGame.ts",
+          "operation": "modify",
+          "description": "Create an Audio instance for the correct answer sound effect using frontend/public/assets/generated/correct-answer-sound.dim_WIDTHxHEIGHT.mp3. Play this sound immediately when handleAnswer is called with the correct answer. Ensure sound volume allows background music to continue playing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "summary": "Add regretful sound effect for incorrect answers",
+      "acceptanceCriteria": [
+        "Sound effect plays immediately when incorrect answer is selected",
+        "Sound is regretful and disappointing in tone",
+        "Sound does not interrupt or stop the background music",
+        "Audio file is placed in frontend/public/assets/generated"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useQuizGame.ts",
+          "operation": "modify",
+          "description": "Create an Audio instance for the incorrect answer sound effect using frontend/public/assets/generated/incorrect-answer-sound.dim_WIDTHxHEIGHT.mp3. Play this sound immediately when handleAnswer is called with an incorrect answer. Ensure sound volume allows background music to continue playing."
+        }
+      ]
+    }
+  ]
+}
