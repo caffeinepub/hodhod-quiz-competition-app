@@ -91,6 +91,246 @@ export const flagQuestions: Question[] = [
     correctAnswerIndex: 0,
     imageUrl: '/assets/generated/flag-usa.dim_200x133.png',
   },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['آرژانتین', 'اروگوئه', 'یونان', 'اسرائیل'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-brazil.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['مکزیک', 'ایتالیا', 'ایران', 'مجارستان'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-italy.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['هند', 'پاکستان', 'بنگلادش', 'نپال'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-iran.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['روسیه', 'فرانسه', 'هلند', 'صربستان'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-france.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['کره جنوبی', 'ژاپن', 'چین', 'تایوان'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-japan.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['پرتغال', 'اسپانیا', 'برزیل', 'مراکش'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-spain.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['سوئد', 'نروژ', 'فنلاند', 'دانمارک'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-canada.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['نیوزیلند', 'استرالیا', 'انگلستان', 'فیجی'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-australia.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['سوئیس', 'دانمارک', 'نروژ', 'اتریش'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-canada.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['بلژیک', 'آلمان', 'فرانسه', 'هلند'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-germany.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['هلند', 'فرانسه', 'روسیه', 'لوکزامبورگ'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-france.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['یونان', 'اسرائیل', 'آرژانتین', 'اروگوئه'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-uk.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['نروژ', 'سوئد', 'فنلاند', 'ایسلند'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-uk.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['لهستان', 'اندونزی', 'موناکو', 'سنگاپور'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-canada.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['اتریش', 'لتونی', 'پرو', 'لبنان'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-turkey.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['ایرلند', 'ایتالیا', 'مکزیک', 'هند'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-italy.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['اسکاتلند', 'انگلستان', 'ایسلند', 'فنلاند'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-uk.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['ویتنام', 'چین', 'کره شمالی', 'لائوس'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-china.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['تایلند', 'کامبوج', 'لائوس', 'میانمار'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-china.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['مالزی', 'آمریکا', 'لیبریا', 'شیلی'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-usa.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['فیلیپین', 'چک', 'کوبا', 'پورتوریکو'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-usa.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['اندونزی', 'لهستان', 'موناکو', 'سنگاپور'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-canada.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['پاکستان', 'ترکیه', 'الجزایر', 'تونس'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-turkey.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['بنگلادش', 'هند', 'پاکستان', 'نپال'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-japan.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['نپال', 'هند', 'بوتان', 'تبت'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-china.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['سنگاپور', 'اندونزی', 'مالزی', 'ترکیه'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-turkey.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['عراق', 'سوریه', 'مصر', 'یمن'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-egypt.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['سوریه', 'عراق', 'یمن', 'اردن'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-egypt.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['اردن', 'فلسطین', 'سودان', 'امارات'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-egypt.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['امارات', 'کویت', 'اردن', 'سودان'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-saudi.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['کویت', 'امارات', 'عراق', 'اردن'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-saudi.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['قطر', 'بحرین', 'امارات', 'عمان'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-saudi.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['بحرین', 'قطر', 'امارات', 'کویت'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-saudi.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['عمان', 'امارات', 'یمن', 'اردن'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-saudi.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['یمن', 'عراق', 'سوریه', 'مصر'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-egypt.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['لبنان', 'کانادا', 'اتریش', 'پرو'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-canada.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['اسرائیل', 'یونان', 'آرژانتین', 'اروگوئه'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-uk.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['افغانستان', 'پاکستان', 'ایران', 'عراق'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-iran.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['آذربایجان', 'ترکیه', 'ترکمنستان', 'ازبکستان'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-turkey.dim_200x133.png',
+  },
+  {
+    questionText: 'این پرچم متعلق به کدام کشور است؟',
+    options: ['قزاقستان', 'ازبکستان', 'ترکمنستان', 'قرقیزستان'],
+    correctAnswerIndex: 0,
+    imageUrl: '/assets/generated/flag-turkey.dim_200x133.png',
+  },
 ];
 
 export const sportsQuestions: Question[] = [
@@ -183,6 +423,186 @@ export const sportsQuestions: Question[] = [
     questionText: 'کدام تیم بیشترین قهرمانی لیگ قهرمانان اروپا را دارد؟',
     options: ['بارسلونا', 'میلان', 'رئال مادرید', 'بایرن مونیخ'],
     correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'پله، افسانه فوتبال، از کدام کشور است؟',
+    options: ['آرژانتین', 'برزیل', 'اروگوئه', 'کلمبیا'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'در تنیس، چند ست برای برد در گرند اسلم مردان لازم است؟',
+    options: ['۲ ست', '۳ ست', '۴ ست', '۵ ست'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'کدام کشور میزبان اولین جام جهانی فوتبال بود؟',
+    options: ['برزیل', 'آرژانتین', 'اروگوئه', 'ایتالیا'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'در بسکتبال NBA، چند دقیقه هر کوارتر است؟',
+    options: ['۱۰ دقیقه', '۱۲ دقیقه', '۱۵ دقیقه', '۲۰ دقیقه'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'مایکل جردن در کدام تیم NBA بیشترین افتخارات را کسب کرد؟',
+    options: ['لیکرز', 'بولز', 'سلتیکس', 'واریورز'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'کدام ورزشکار رکورد ۱۰۰ متر دو را دارد؟',
+    options: ['کارل لوئیس', 'یوسین بولت', 'اسافا پاول', 'جاستین گاتلین'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'در فوتبال، توپ از چند پنج‌ضلعی و شش‌ضلعی تشکیل شده؟',
+    options: ['۱۲ و ۲۰', '۲۰ و ۱۲', '۱۸ و ۲۴', '۲۴ و ۱۸'],
+    correctAnswerIndex: 0,
+  },
+  {
+    questionText: 'کدام کشور بیشترین مدال المپیک را در تاریخ کسب کرده؟',
+    options: ['چین', 'روسیه', 'آمریکا', 'آلمان'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'در بوکس، چند دسته وزنی اصلی وجود دارد؟',
+    options: ['۸ دسته', '۱۲ دسته', '۱۷ دسته', '۲۰ دسته'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'محمد علی کلی، قهرمان بوکس، از کدام کشور بود؟',
+    options: ['انگلستان', 'آمریکا', 'کانادا', 'جامائیکا'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'در فوتبال، کارت زرد به چه معناست؟',
+    options: ['اخراج', 'هشدار', 'پنالتی', 'گل'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'کدام تیم ملی فوتبال لقب "سلسائو" دارد؟',
+    options: ['آرژانتین', 'برزیل', 'کلمبیا', 'اروگوئه'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'در تنیس، امتیاز صفر را چه می‌نامند؟',
+    options: ['Zero', 'Love', 'Nil', 'Nothing'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'کدام ورزش در المپیک زمستانی برگزار نمی‌شود؟',
+    options: ['اسکی', 'هاکی روی یخ', 'شنا', 'اسکیت'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'رافائل نادال در کدام زمین تنیس بیشترین قهرمانی را دارد؟',
+    options: ['ویمبلدون', 'رولان گاروس', 'یو اس اوپن', 'استرالیا اوپن'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'در فوتبال آمریکایی، چند امتیاز برای یک تاچ‌داون داده می‌شود؟',
+    options: ['۳ امتیاز', '۶ امتیاز', '۷ امتیاز', '۸ امتیاز'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'کدام کشور در جام جهانی ۲۰۱۸ قهرمان شد؟',
+    options: ['آلمان', 'فرانسه', 'برزیل', 'کرواسی'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'در گلف، چند حفره در یک دوره استاندارد وجود دارد؟',
+    options: ['۹ حفره', '۱۲ حفره', '۱۸ حفره', '۲۴ حفره'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'کدام ورزشکار تنیس بیشترین گرند اسلم را برده؟',
+    options: ['راجر فدرر', 'رافائل نادال', 'نواک جوکوویچ', 'پیت سامپراس'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'در هندبال، چند بازیکن در زمین حضور دارند؟',
+    options: ['۵ نفر', '۶ نفر', '۷ نفر', '۸ نفر'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'کدام کشور میزبان المپیک ۲۰۲۰ بود؟',
+    options: ['چین', 'ژاپن', 'کره جنوبی', 'استرالیا'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'در بیسبال، چند بازیکن در هر تیم وجود دارد؟',
+    options: ['۷ نفر', '۸ نفر', '۹ نفر', '۱۰ نفر'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'کدام تیم فوتبال انگلیس لقب "شیاطین سرخ" دارد؟',
+    options: ['لیورپول', 'منچستر یونایتد', 'آرسنال', 'چلسی'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'در راگبی، چند بازیکن در هر تیم وجود دارد؟',
+    options: ['۱۱ نفر', '۱۳ نفر', '۱۵ نفر', '۱۷ نفر'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'کدام کشور در المپیک ۲۰۱۶ ریو میزبان بود؟',
+    options: ['آرژانتین', 'برزیل', 'شیلی', 'کلمبیا'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'در اسنوکر، چند توپ رنگی روی میز وجود دارد؟',
+    options: ['۶ توپ', '۷ توپ', '۸ توپ', '۹ توپ'],
+    correctAnswerIndex: 0,
+  },
+  {
+    questionText: 'کدام ورزشکار ایرانی در وزنه‌برداری مدال المپیک گرفت؟',
+    options: ['حسین رضازاده', 'بهداد سلیمی', 'کیانوش رستمی', 'همه موارد'],
+    correctAnswerIndex: 3,
+  },
+  {
+    questionText: 'در دوچرخه‌سواری، تور دو فرانس چند هفته طول می‌کشد؟',
+    options: ['۱ هفته', '۲ هفته', '۳ هفته', '۴ هفته'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'کدام کشور در جام جهانی ۲۰۱۴ قهرمان شد؟',
+    options: ['برزیل', 'آرژانتین', 'آلمان', 'هلند'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'در شمشیربازی، چند نوع شمشیر وجود دارد؟',
+    options: ['۲ نوع', '۳ نوع', '۴ نوع', '۵ نوع'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'کدام تیم فوتبال اسپانیا لقب "بلوگرانا" دارد؟',
+    options: ['رئال مادرید', 'بارسلونا', 'اتلتیکو مادرید', 'والنسیا'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'در جودو، بالاترین کمربند چه رنگی است؟',
+    options: ['قرمز', 'سیاه', 'سفید', 'طلایی'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'کدام کشور بیشترین قهرمانی یورو را دارد؟',
+    options: ['آلمان', 'اسپانیا', 'ایتالیا', 'فرانسه'],
+    correctAnswerIndex: 0,
+  },
+  {
+    questionText: 'در تکواندو، کدام رنگ کمربند برای مبتدی است؟',
+    options: ['سفید', 'زرد', 'سبز', 'آبی'],
+    correctAnswerIndex: 0,
+  },
+  {
+    questionText: 'کدام ورزشکار بیشترین توپ طلا را برده است؟',
+    options: ['کریستیانو رونالدو', 'لیونل مسی', 'مارادونا', 'پله'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'در شنا، کدام شیوه سریع‌ترین است؟',
+    options: ['کرال', 'پروانه', 'قورباغه', 'پشت'],
+    correctAnswerIndex: 0,
   },
 ];
 
@@ -277,6 +697,176 @@ export const intelligenceQuestions: Question[] = [
     options: ['۱۲۰', '۱۳۰', '۱۴۰', '۱۵۰'],
     correctAnswerIndex: 3,
   },
+  {
+    questionText: 'اگر ۲۰ - ۵ × ۳ = ؟',
+    options: ['۵', '۱۵', '۴۵', '۶۰'],
+    correctAnswerIndex: 0,
+  },
+  {
+    questionText: 'کدام عدد در دنباله جا افتاده؟ ۳، ۶، ۱۲، __، ۴۸',
+    options: ['۱۸', '۲۰', '۲۴', '۳۰'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'اگر ۴ × ۴ + ۴ ÷ ۴ = ؟',
+    options: ['۱۶', '۱۷', '۲۰', '۲۱'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'کدام عدد اول نیست؟',
+    options: ['۱۷', '۱۹', '۲۱', '۲۳'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'اگر ۱۰۰ ÷ ۵ - ۱۰ = ؟',
+    options: ['۸', '۱۰', '۱۲', '۱۵'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'کدام عدد در دنباله جا افتاده؟ ۸۱، ۲۷، ۹، __',
+    options: ['۱', '۲', '۳', '۴'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'اگر یک مربع مساحت ۳۶ دارد، ضلع آن چند است؟',
+    options: ['۴', '۶', '۸', '۹'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'حاصل ۹ × ۹ - ۹ چقدر است؟',
+    options: ['۶۳', '۷۲', '۸۱', '۹۰'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'اگر ۳ + ۳ × ۳ - ۳ = ؟',
+    options: ['۶', '۹', '۱۲', '۱۵'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'کدام عدد در دنباله جا افتاده؟ ۱، ۴، ۹، ۱۶، __',
+    options: ['۲۰', '۲۳', '۲۵', '۳۰'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'اگر ۶۰ ÷ ۳ + ۱۰ = ؟',
+    options: ['۲۰', '۲۵', '۳۰', '۳۵'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'کدام عدد مربع کامل نیست؟',
+    options: ['۱۶', '۲۵', '۳۰', '۳۶'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'اگر ۸ × ۷ + ۴ = ؟',
+    options: ['۵۶', '۶۰', '۶۴', '۶۸'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'کدام عدد در دنباله جا افتاده؟ ۵، ۱۰، ۲۰، __، ۸۰',
+    options: ['۳۰', '۳۵', '۴۰', '۵۰'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'اگر ۱۵ × ۲ - ۵ = ؟',
+    options: ['۲۰', '۲۵', '۳۰', '۳۵'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'حاصل ۱۲ ÷ ۴ × ۶ چقدر است؟',
+    options: ['۱۲', '۱۵', '۱۸', '۲۴'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'کدام عدد در دنباله جا افتاده؟ ۲، ۶، ۱۸، __، ۱۶۲',
+    options: ['۳۶', '۴۸', '۵۴', '۷۲'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'اگر ۲۵ - ۱۰ ÷ ۲ = ؟',
+    options: ['۷.۵', '۱۵', '۲۰', '۲۲.۵'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'کدام عدد زوج نیست؟',
+    options: ['۱۴', '۱۶', '۱۷', '۱۸'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'اگر ۹ × ۶ - ۱۴ = ؟',
+    options: ['۳۶', '۴۰', '۴۴', '۵۰'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'کدام عدد در دنباله جا افتاده؟ ۱۰، ۲۰، ۴۰، __، ۱۶۰',
+    options: ['۶۰', '۷۰', '۸۰', '۱۰۰'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'اگر ۳۶ ÷ ۶ + ۸ = ؟',
+    options: ['۱۲', '۱۴', '۱۶', '۱۸'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'حاصل ۱۱ × ۱۱ چقدر است؟',
+    options: ['۱۱۱', '۱۲۱', '۱۳۱', '۱۴۱'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'کدام عدد در دنباله جا افتاده؟ ۷، ۱۴، ۲۸، __، ۱۱۲',
+    options: ['۴۲', '۴۸', '۵۶', '۶۴'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'اگر ۴۰ - ۸ × ۳ = ؟',
+    options: ['۱۲', '۱۶', '۲۴', '۹۶'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'کدام عدد بزرگ‌تر است؟ ۰.۵ یا ۰.۰۵؟',
+    options: ['۰.۵', '۰.۰۵', 'برابرند', 'هیچکدام'],
+    correctAnswerIndex: 0,
+  },
+  {
+    questionText: 'اگر ۱۸ ÷ ۳ × ۴ = ؟',
+    options: ['۱۲', '۱۸', '۲۴', '۳۰'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'کدام عدد در دنباله جا افتاده؟ ۱۲۸، ۶۴، ۳۲، __، ۸',
+    options: ['۱۲', '۱۴', '۱۶', '۲۰'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'اگر ۵۰ ÷ ۲ + ۲۵ = ؟',
+    options: ['۴۰', '۴۵', '۵۰', '۵۵'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'حاصل ۱۳ × ۴ - ۲ چقدر است؟',
+    options: ['۴۸', '۵۰', '۵۲', '۵۴'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'کدام عدد در دنباله جا افتاده؟ ۱۱، ۲۲، ۳۳، __، ۵۵',
+    options: ['۴۰', '۴۲', '۴۴', '۴۶'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'اگر ۷۲ ÷ ۸ - ۳ = ؟',
+    options: ['۴', '۵', '۶', '۷'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'کدام عدد فرد است؟',
+    options: ['۲۴', '۲۶', '۲۷', '۲۸'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'اگر ۱۴ × ۳ + ۸ = ؟',
+    options: ['۴۸', '۵۰', '۵۲', '۵۴'],
+    correctAnswerIndex: 1,
+  },
 ];
 
 export const scienceQuestions: Question[] = [
@@ -369,5 +959,175 @@ export const scienceQuestions: Question[] = [
     questionText: 'کدام گاز برای فتوسنتز گیاهان ضروری است؟',
     options: ['اکسیژن', 'نیتروژن', 'کربن دی‌اکسید', 'هیدروژن'],
     correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'کدام سیاره حلقه دارد؟',
+    options: ['مریخ', 'زحل', 'زهره', 'عطارد'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'فرمول شیمیایی نمک خوراکی چیست؟',
+    options: ['NaCl', 'KCl', 'CaCl2', 'MgCl2'],
+    correctAnswerIndex: 0,
+  },
+  {
+    questionText: 'کدام عنصر نماد Au دارد؟',
+    options: ['نقره', 'طلا', 'آلومینیوم', 'آرگون'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'چند سیاره در منظومه شمسی وجود دارد؟',
+    options: ['۷', '۸', '۹', '۱۰'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'کدام عضو بدن اکسیژن را به خون می‌رساند؟',
+    options: ['قلب', 'کبد', 'ریه', 'کلیه'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'نقطه ذوب یخ چند درجه سانتیگراد است؟',
+    options: ['-۱۰', '۰', '۱۰', '۳۲'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'کدام حیوان بزرگ‌ترین پستاندار زمین است؟',
+    options: ['فیل', 'نهنگ آبی', 'زرافه', 'کرگدن'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'فرمول شیمیایی قند چیست؟',
+    options: ['C6H12O6', 'H2O', 'CO2', 'NaCl'],
+    correctAnswerIndex: 0,
+  },
+  {
+    questionText: 'کدام عنصر نماد Fe دارد؟',
+    options: ['فلوئور', 'آهن', 'فرانسیم', 'فرمیوم'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'چند دندان در دهان انسان بالغ وجود دارد؟',
+    options: ['۲۸', '۳۰', '۳۲', '۳۴'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'کدام سیاره دورترین سیاره از خورشید است؟',
+    options: ['اورانوس', 'نپتون', 'پلوتو', 'زحل'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'فرمول شیمیایی کربن دی‌اکسید چیست؟',
+    options: ['CO', 'CO2', 'C2O', 'O2'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'کدام عضو بدن انسولین تولید می‌کند؟',
+    options: ['کبد', 'کلیه', 'پانکراس', 'طحال'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'چند ماه در سال دارای ۳۱ روز است؟',
+    options: ['۵', '۶', '۷', '۸'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'کدام عنصر نماد O دارد؟',
+    options: ['طلا', 'اکسیژن', 'اسمیوم', 'اوگانسون'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'بزرگ‌ترین اندام بدن انسان کدام است؟',
+    options: ['کبد', 'پوست', 'ریه', 'مغز'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'کدام سیاره نزدیک‌ترین به زمین است؟',
+    options: ['مریخ', 'زهره', 'عطارد', 'مشتری'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'فرمول شیمیایی متان چیست؟',
+    options: ['CH4', 'C2H6', 'C3H8', 'CH3'],
+    correctAnswerIndex: 0,
+  },
+  {
+    questionText: 'کدام عنصر نماد Ag دارد؟',
+    options: ['طلا', 'نقره', 'آلومینیوم', 'آرگون'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'چند حس اصلی در انسان وجود دارد؟',
+    options: ['۳', '۴', '۵', '۶'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'کدام سیاره کوچک‌ترین سیاره منظومه شمسی است؟',
+    options: ['عطارد', 'مریخ', 'پلوتو', 'زهره'],
+    correctAnswerIndex: 0,
+  },
+  {
+    questionText: 'فرمول شیمیایی اسید سولفوریک چیست؟',
+    options: ['H2SO4', 'HCl', 'HNO3', 'H2CO3'],
+    correctAnswerIndex: 0,
+  },
+  {
+    questionText: 'کدام عضو بدن خون را فیلتر می‌کند؟',
+    options: ['کبد', 'کلیه', 'طحال', 'ریه'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'چند قاره در جهان وجود دارد؟',
+    options: ['۵', '۶', '۷', '۸'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'کدام عنصر نماد N دارد؟',
+    options: ['نئون', 'نیکل', 'نیتروژن', 'نپتونیوم'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'بزرگ‌ترین اقیانوس جهان کدام است؟',
+    options: ['اطلس', 'هند', 'آرام', 'منجمد شمالی'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'کدام سیاره بیشترین قمر را دارد؟',
+    options: ['زمین', 'مریخ', 'مشتری', 'زحل'],
+    correctAnswerIndex: 3,
+  },
+  {
+    questionText: 'فرمول شیمیایی آمونیاک چیست؟',
+    options: ['NH3', 'NH4', 'N2H4', 'NH2'],
+    correctAnswerIndex: 0,
+  },
+  {
+    questionText: 'کدام عنصر نماد C دارد؟',
+    options: ['کلسیم', 'کربن', 'کلر', 'کبالت'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'چند مهره در ستون فقرات انسان وجود دارد؟',
+    options: ['۲۴', '۲۶', '۳۳', '۴۰'],
+    correctAnswerIndex: 2,
+  },
+  {
+    questionText: 'کدام سیاره گرم‌ترین سیاره منظومه شمسی است؟',
+    options: ['عطارد', 'زهره', 'مریخ', 'زمین'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'فرمول شیمیایی اسید کلریدریک چیست؟',
+    options: ['HCl', 'H2SO4', 'HNO3', 'H2CO3'],
+    correctAnswerIndex: 0,
+  },
+  {
+    questionText: 'کدام عنصر نماد He دارد؟',
+    options: ['هیدروژن', 'هلیوم', 'هافنیوم', 'هاسیوم'],
+    correctAnswerIndex: 1,
+  },
+  {
+    questionText: 'بلندترین کوه جهان کدام است؟',
+    options: ['K2', 'اورست', 'کانگچنجونگا', 'لوتسه'],
+    correctAnswerIndex: 1,
   },
 ];

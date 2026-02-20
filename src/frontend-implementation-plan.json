@@ -1,21 +1,85 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Replace background music with more exciting/thrilling track",
+  "title": "Significantly expand question pool and improve randomization across all categories",
   "requirements": [
     {
-      "id": "REQ-22",
-      "summary": "Replace the current background music file with a new, more exciting and thrilling music track that plays continuously throughout the quiz game experience",
+      "id": "REQ-24",
+      "summary": "Expand country flags question pool to 50+ questions with flag images and Persian options",
       "acceptanceCriteria": [
-        "New background music file is more energetic and thrilling in tempo and intensity compared to the current track",
-        "Music loops continuously during gameplay without interruption",
-        "Music maintains consistent volume and quality throughout playback"
+        "Country flags question pool contains at least 50 unique questions",
+        "Each question has a valid flag image URL and 4 Persian answer options",
+        "Correct answer index is properly mapped for each question"
       ],
       "file_operations": [
         {
-          "path": "frontend/public/assets/generated/quiz-background-music.mp3",
+          "path": "frontend/src/data/questions.ts",
           "operation": "modify",
-          "description": "Replace the existing background music file with a new, more exciting and thrilling music track. The new track must have higher tempo and intensity to create an energetic and suspenseful atmosphere during the quiz gameplay. Ensure the audio file maintains high quality, loops seamlessly without gaps or clicks at the loop point, and has consistent volume throughout the duration."
+          "description": "Expand the flagQuestions array from 15 to at least 50 unique questions. Each question must include a Persian text question, an image URL referencing flag assets in frontend/public/assets/generated/ (using existing flags like frontend/public/assets/generated/flag-iran.dim_200x133.png and adding new country flags), 4 Persian answer options, and a correctAnswer index. Maintain the existing Question interface structure with all required fields."
+        }
+      ]
+    },
+    {
+      "id": "REQ-25",
+      "summary": "Expand sports question pool to 50+ questions with Persian options",
+      "acceptanceCriteria": [
+        "Sports question pool contains at least 50 unique questions",
+        "Each question has 4 Persian answer options",
+        "Correct answer index is properly mapped for each question"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/data/questions.ts",
+          "operation": "modify",
+          "description": "Expand the sportsQuestions array from 15 to at least 50 unique questions. Each question must include Persian text covering various sports topics (football, basketball, Olympics, etc.), 4 Persian answer options, and a correctAnswer index. Maintain the existing Question interface structure."
+        }
+      ]
+    },
+    {
+      "id": "REQ-26",
+      "summary": "Expand intelligence/math question pool to 50+ questions with Persian options",
+      "acceptanceCriteria": [
+        "Intelligence/math question pool contains at least 50 unique questions",
+        "Each question has 4 Persian answer options",
+        "Correct answer index is properly mapped for each question"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/data/questions.ts",
+          "operation": "modify",
+          "description": "Expand the intelligenceQuestions array from 18 to at least 50 unique questions. Each question must include Persian text covering logic puzzles, math problems, pattern recognition, and reasoning tasks, 4 Persian answer options, and a correctAnswer index. Maintain the existing Question interface structure."
+        }
+      ]
+    },
+    {
+      "id": "REQ-27",
+      "summary": "Expand science/technology question pool to 50+ questions with Persian options",
+      "acceptanceCriteria": [
+        "Science/technology question pool contains at least 50 unique questions",
+        "Each question has 4 Persian answer options",
+        "Correct answer index is properly mapped for each question"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/data/questions.ts",
+          "operation": "modify",
+          "description": "Expand the scienceQuestions array from 16 to at least 50 unique questions. Each question must include Persian text covering physics, chemistry, biology, technology, astronomy, and general science topics, 4 Persian answer options, and a correctAnswer index. Maintain the existing Question interface structure."
+        }
+      ]
+    },
+    {
+      "id": "REQ-28",
+      "summary": "Enhance randomization algorithm to prevent duplicate questions in same session and improve distribution",
+      "acceptanceCriteria": [
+        "Questions are selected using an improved randomization algorithm that provides better distribution",
+        "The same question does not appear twice within a single game session",
+        "Random selection provides good variety across multiple game sessions"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useQuizGame.ts",
+          "operation": "modify",
+          "description": "Enhance the question selection logic to track used question indices per category within the current game session. Implement a Fisher-Yates shuffle or similar algorithm to pre-shuffle each category's question pool at game start, then select questions sequentially from the shuffled pool. Store used question indices in the game state to prevent duplicates within a single session (4 questions total). Ensure the randomization provides good variety by not using simple modulo or sequential selection patterns."
         }
       ]
     }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 11,
+  "projectStateVersion": 15,
   "summary": "Quiz competition app for Hodhod store with 4 multiple-choice questions (country flags, sports, intelligence/math, science/technology), 12-second time limit per question, game over on wrong answer with correct answer displayed, randomized question selection",
   "architectural_notes": [
     "App branded for Hodhod store",
@@ -136,6 +136,46 @@
       "title": "Update the welcome screen text to reflect the new 12-second time limit instead of 7 seconds",
       "reqIds": [
         "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-expand-the-question-pool-for-country-flags-category-to-at-least-50-unique-questions-with-flag-images-and-4-multiple-choice-options-each-in-persian",
+      "title": "Expand the question pool for country flags category to at least 50 unique questions with flag images and 4 multiple-choice options each in Persian",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-expand-the-question-pool-for-sports-category-to-at-least-50-unique-questions-with-4-multiple-choice-options-each-in-persian",
+      "title": "Expand the question pool for sports category to at least 50 unique questions with 4 multiple-choice options each in Persian",
+      "reqIds": [
+        "REQ-25"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-expand-the-question-pool-for-intelligence-math-category-to-at-least-50-unique-questions-with-4-multiple-choice-options-each-in-persian",
+      "title": "Expand the question pool for intelligence/math category to at least 50 unique questions with 4 multiple-choice options each in Persian",
+      "reqIds": [
+        "REQ-26"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-expand-the-question-pool-for-science-technology-category-to-at-least-50-unique-questions-with-4-multiple-choice-options-each-in-persian",
+      "title": "Expand the question pool for science/technology category to at least 50 unique questions with 4 multiple-choice options each in Persian",
+      "reqIds": [
+        "REQ-27"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-enhance-the-randomization-algorithm-in-usequizgame-hook-to-ensure-better-distribution-and-variety-when-selecting-questions-from-each-category-pool-preventing-recently-shown-questions-from-appearing-again-in-the-same-game-session",
+      "title": "Enhance the randomization algorithm in useQuizGame hook to ensure better distribution and variety when selecting questions from each category pool, preventing recently-shown questions from appearing again in the same game session",
+      "reqIds": [
+        "REQ-28"
       ],
       "version": 1
     }
@@ -303,6 +343,32 @@
       "reqIds": [
         "REQ-22"
       ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-28",
+      "summary": "Replace background music with epic/heroic music (موزیک حماسی)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-29",
+      "summary": "Replace the current background music file in frontend/public/assets/generated with a new epic/heroic music track that conveys grandeur, excitement, and heroism",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-30",
+      "summary": "Improve randomization of question selection",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-31",
+      "summary": "Significantly expand question pool with many more questions across all categories",
+      "reqIds": [],
       "status": "pending"
     }
   ],

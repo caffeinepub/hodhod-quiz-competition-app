@@ -1,4 +1,95 @@
 {
   "kind": "feature_evidence_report",
-  "features": []
+  "features": [
+    {
+      "featureId": "feature-expand-the-question-pool-for-country-flags-category-to-at-least-50-unique-questions-with-flag-images-and-4-multiple-choice-options-each-in-persian",
+      "featureTitle": "Expand the question pool for country flags category to at least 50 unique questions with flag images and 4 multiple-choice options each in Persian",
+      "files": [
+        "frontend/src/data/questions.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-24"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-expand-the-question-pool-for-sports-category-to-at-least-50-unique-questions-with-4-multiple-choice-options-each-in-persian",
+      "featureTitle": "Expand the question pool for sports category to at least 50 unique questions with 4 multiple-choice options each in Persian",
+      "files": [
+        "frontend/src/data/questions.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-25"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-expand-the-question-pool-for-intelligence-math-category-to-at-least-50-unique-questions-with-4-multiple-choice-options-each-in-persian",
+      "featureTitle": "Expand the question pool for intelligence/math category to at least 50 unique questions with 4 multiple-choice options each in Persian",
+      "files": [
+        "frontend/src/data/questions.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-26"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-expand-the-question-pool-for-science-technology-category-to-at-least-50-unique-questions-with-4-multiple-choice-options-each-in-persian",
+      "featureTitle": "Expand the question pool for science/technology category to at least 50 unique questions with 4 multiple-choice options each in Persian",
+      "files": [
+        "frontend/src/data/questions.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-27"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-enhance-the-randomization-algorithm-in-usequizgame-hook-to-ensure-better-distribution-and-variety-when-selecting-questions-from-each-category-pool-preventing-recently-shown-questions-from-appearing-again-in-the-same-game-session",
+      "featureTitle": "Enhance the randomization algorithm in useQuizGame hook to ensure better distribution and variety when selecting questions from each category pool, preventing recently-shown questions from appearing again in the same game session",
+      "files": [
+        "frontend/src/hooks/useQuizGame.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-28"
+      ],
+      "confidence": "high"
+    }
+  ]
 }

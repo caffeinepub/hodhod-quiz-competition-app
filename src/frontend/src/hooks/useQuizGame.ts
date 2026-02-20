@@ -7,13 +7,26 @@ import {
   useGetScienceQuestions,
 } from './useQueries';
 
+// Fisher-Yates shuffle algorithm for better randomization
+function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
 export function useQuizGame() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [gameState, setGameState] = useState<GameState>('idle');
   const [gameOverReason, setGameOverReason] = useState<GameOverReason | null>(null);
-  const [usedQuestionIndices, setUsedQuestionIndices] = useState<number[][]>([[], [], [], []]);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
+  
+  // Store shuffled question indices for each category at game start
+  const [shuffledIndices, setShuffledIndices] = useState<number[][]>([[], [], [], []]);
+  const [usedQuestionCount, setUsedQuestionCount] = useState<number[]>([0, 0, 0, 0]);
 
   const { data: flagQuestions = [], isLoading: loadingFlags } = useGetFlagQuestions();
   const { data: sportsQuestions = [], isLoading: loadingSports } = useGetSportsQuestions();
@@ -55,24 +68,35 @@ export function useQuizGame() {
   const currentQuestion = useMemo(() => {
     if (!currentCategory || currentCategory.questions.length === 0) return null;
     
-    const availableIndices = currentCategory.questions
-      .map((_, idx) => idx)
-      .filter(idx => !usedQuestionIndices[currentQuestionIndex].includes(idx));
+    // Get the shuffled indices for this category
+    const categoryShuffled = shuffledIndices[currentQuestionIndex];
+    const usedCount = usedQuestionCount[currentQuestionIndex];
     
-    if (availableIndices.length === 0) return null;
+    // If we haven't used any questions yet or shuffled array is empty, return null
+    if (categoryShuffled.length === 0 || usedCount >= categoryShuffled.length) {
+      return null;
+    }
     
-    const randomIndex = availableIndices[Math.floor(Math.random() * availableIndices.length)];
-    return currentCategory.questions[randomIndex];
-  }, [currentCategory, currentQuestionIndex, usedQuestionIndices]);
+    // Get the next question from the shuffled array
+    const questionIndex = categoryShuffled[usedCount];
+    return currentCategory.questions[questionIndex];
+  }, [currentCategory, currentQuestionIndex, shuffledIndices, usedQuestionCount]);
 
   const startGame = useCallback(() => {
+    // Shuffle all category question indices at game start
+    const newShuffledIndices = categories.map(category => {
+      const indices = category.questions.map((_, idx) => idx);
+      return shuffleArray(indices);
+    });
+    
+    setShuffledIndices(newShuffledIndices);
+    setUsedQuestionCount([0, 0, 0, 0]);
     setGameState('playing');
     setCurrentQuestionIndex(0);
     setGameOverReason(null);
-    setUsedQuestionIndices([[], [], [], []]);
     setSelectedAnswer(null);
     setIsCorrect(null);
-  }, []);
+  }, [categories]);
 
   const handleAnswer = useCallback(
     (selectedIndex: number) => {

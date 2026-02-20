@@ -1,35 +1,111 @@
 {
   "kind": "build_request",
-  "title": "Replace background music with more exciting/thrilling track",
+  "title": "Significantly expand question pool and improve randomization across all categories",
+  "projectName": "Hodhod Quiz",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-22",
-      "text": "Replace the current background music file with a new, more exciting and thrilling music track that plays continuously throughout the quiz game experience",
+      "id": "REQ-24",
+      "text": "Expand the question pool for country flags category to at least 50 unique questions with flag images and 4 multiple-choice options each in Persian",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-current"
+          "msg-user-latest"
         ],
         "quotes": [
-          "موزیک هیجانی نمیشه گذاشت؟"
+          "رندوم تر باشه سوالاتو خیلی بیشتر کن و"
         ]
       },
       "acceptanceCriteria": [
-        "New background music file is more energetic and thrilling in tempo and intensity compared to the current track",
-        "Music loops continuously during gameplay without interruption",
-        "Music maintains consistent volume and quality throughout playback"
+        "Country flags question pool contains at least 50 unique questions",
+        "Each question has a valid flag image URL and 4 Persian answer options",
+        "Correct answer index is properly mapped for each question"
+      ]
+    },
+    {
+      "id": "REQ-25",
+      "text": "Expand the question pool for sports category to at least 50 unique questions with 4 multiple-choice options each in Persian",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-latest"
+        ],
+        "quotes": [
+          "رندوم تر باشه سوالاتو خیلی بیشتر کن و"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Sports question pool contains at least 50 unique questions",
+        "Each question has 4 Persian answer options",
+        "Correct answer index is properly mapped for each question"
+      ]
+    },
+    {
+      "id": "REQ-26",
+      "text": "Expand the question pool for intelligence/math category to at least 50 unique questions with 4 multiple-choice options each in Persian",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-latest"
+        ],
+        "quotes": [
+          "رندوم تر باشه سوالاتو خیلی بیشتر کن و"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Intelligence/math question pool contains at least 50 unique questions",
+        "Each question has 4 Persian answer options",
+        "Correct answer index is properly mapped for each question"
+      ]
+    },
+    {
+      "id": "REQ-27",
+      "text": "Expand the question pool for science/technology category to at least 50 unique questions with 4 multiple-choice options each in Persian",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-latest"
+        ],
+        "quotes": [
+          "رندوم تر باشه سوالاتو خیلی بیشتر کن و"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Science/technology question pool contains at least 50 unique questions",
+        "Each question has 4 Persian answer options",
+        "Correct answer index is properly mapped for each question"
+      ]
+    },
+    {
+      "id": "REQ-28",
+      "text": "Enhance the randomization algorithm in useQuizGame hook to ensure better distribution and variety when selecting questions from each category pool, preventing recently-shown questions from appearing again in the same game session",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-latest"
+        ],
+        "quotes": [
+          "رندوم تر باشه سوالاتو"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Questions are selected using an improved randomization algorithm that provides better distribution",
+        "The same question does not appear twice within a single game session",
+        "Random selection provides good variety across multiple game sessions"
       ]
     }
   ],
   "constraints": [
-    "Do not modify the audio playback implementation in frontend/src/pages/QuizGame.tsx",
-    "Keep the existing sound effects for correct and incorrect answers unchanged"
+    "Maintain existing game structure of exactly 4 questions (one per category)",
+    "Keep 12-second timer per question",
+    "Preserve Persian language for all questions and UI text",
+    "Do not modify the immutable frontend paths (useInternetIdentity, useActor, main.tsx, components/ui)"
   ],
   "nonGoals": [
-    "Changing sound effect files for answer feedback",
-    "Adding volume controls or audio settings",
-    "Modifying when music starts or stops playing"
+    "Adding new question categories beyond the existing four",
+    "Changing the game mechanics or scoring system",
+    "Modifying the backend actor structure",
+    "Altering the UI design or color scheme"
   ],
   "imageRequirements": {
     "required": [],
