@@ -1,111 +1,52 @@
 {
   "kind": "build_request",
-  "title": "Significantly expand question pool and improve randomization across all categories",
-  "projectName": "Hodhod Quiz",
-  "priority": "normal",
+  "title": "Fix incorrect country flag question answers",
+  "priority": "high",
   "requirements": [
     {
-      "id": "REQ-24",
-      "text": "Expand the question pool for country flags category to at least 50 unique questions with flag images and 4 multiple-choice options each in Persian",
+      "id": "REQ-31",
+      "text": "Audit all country flag questions in frontend/src/data/questions.ts to verify that the correctAnswer index (0-3) points to the actual correct country name option in the options array for each flag question",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-user-latest"
+          "msg-last"
         ],
         "quotes": [
-          "رندوم تر باشه سوالاتو خیلی بیشتر کن و"
+          "پرچم کشور ها همه جواباشون اشتباس درستش کن زود"
         ]
       },
       "acceptanceCriteria": [
-        "Country flags question pool contains at least 50 unique questions",
-        "Each question has a valid flag image URL and 4 Persian answer options",
-        "Correct answer index is properly mapped for each question"
+        "Every flag question's correctAnswer field matches the index of the option that correctly identifies the country shown in the flag image",
+        "All 50+ flag questions have been reviewed and corrected where mismatches exist"
       ]
     },
     {
-      "id": "REQ-25",
-      "text": "Expand the question pool for sports category to at least 50 unique questions with 4 multiple-choice options each in Persian",
-      "target": "frontend",
+      "id": "REQ-32",
+      "text": "Update the backend flagQuestions Map in backend/main.mo to ensure all question indices map to the correct answer indices that align with the corrected frontend question data",
+      "target": "backend",
       "source": {
         "messageIds": [
-          "msg-user-latest"
+          "msg-last"
         ],
         "quotes": [
-          "رندوم تر باشه سوالاتو خیلی بیشتر کن و"
+          "پرچم کشور ها همه جواباشون اشتباس درستش کن زود"
         ]
       },
       "acceptanceCriteria": [
-        "Sports question pool contains at least 50 unique questions",
-        "Each question has 4 Persian answer options",
-        "Correct answer index is properly mapped for each question"
-      ]
-    },
-    {
-      "id": "REQ-26",
-      "text": "Expand the question pool for intelligence/math category to at least 50 unique questions with 4 multiple-choice options each in Persian",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-user-latest"
-        ],
-        "quotes": [
-          "رندوم تر باشه سوالاتو خیلی بیشتر کن و"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Intelligence/math question pool contains at least 50 unique questions",
-        "Each question has 4 Persian answer options",
-        "Correct answer index is properly mapped for each question"
-      ]
-    },
-    {
-      "id": "REQ-27",
-      "text": "Expand the question pool for science/technology category to at least 50 unique questions with 4 multiple-choice options each in Persian",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-user-latest"
-        ],
-        "quotes": [
-          "رندوم تر باشه سوالاتو خیلی بیشتر کن و"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Science/technology question pool contains at least 50 unique questions",
-        "Each question has 4 Persian answer options",
-        "Correct answer index is properly mapped for each question"
-      ]
-    },
-    {
-      "id": "REQ-28",
-      "text": "Enhance the randomization algorithm in useQuizGame hook to ensure better distribution and variety when selecting questions from each category pool, preventing recently-shown questions from appearing again in the same game session",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-user-latest"
-        ],
-        "quotes": [
-          "رندوم تر باشه سوالاتو"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Questions are selected using an improved randomization algorithm that provides better distribution",
-        "The same question does not appear twice within a single game session",
-        "Random selection provides good variety across multiple game sessions"
+        "Backend Map entries for flag questions match the corrected frontend correctAnswer values",
+        "Answer validation in the game correctly identifies right and wrong answers for all flag questions"
       ]
     }
   ],
   "constraints": [
-    "Maintain existing game structure of exactly 4 questions (one per category)",
-    "Keep 12-second timer per question",
-    "Preserve Persian language for all questions and UI text",
-    "Do not modify the immutable frontend paths (useInternetIdentity, useActor, main.tsx, components/ui)"
+    "Preserve the existing Question type structure and Map-based answer storage in backend/main.mo",
+    "Maintain Persian language for all question text and answer options",
+    "Keep all existing flag image URLs intact"
   ],
   "nonGoals": [
-    "Adding new question categories beyond the existing four",
-    "Changing the game mechanics or scoring system",
-    "Modifying the backend actor structure",
-    "Altering the UI design or color scheme"
+    "Adding new flag questions beyond the existing pool",
+    "Changing the game mechanics or timer duration",
+    "Modifying other question categories (sports, intelligence, science)"
   ],
   "imageRequirements": {
     "required": [],

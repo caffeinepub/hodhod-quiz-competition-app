@@ -1,85 +1,20 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Significantly expand question pool and improve randomization across all categories",
+  "title": "Fix incorrect country flag question answers",
   "requirements": [
     {
-      "id": "REQ-24",
-      "summary": "Expand country flags question pool to 50+ questions with flag images and Persian options",
+      "id": "REQ-31",
+      "summary": "Audit and correct all country flag questions in frontend/src/data/questions.ts to ensure correctAnswer indices match the actual correct country names in the options arrays",
       "acceptanceCriteria": [
-        "Country flags question pool contains at least 50 unique questions",
-        "Each question has a valid flag image URL and 4 Persian answer options",
-        "Correct answer index is properly mapped for each question"
+        "Every flag question's correctAnswer field matches the index of the option that correctly identifies the country shown in the flag image",
+        "All 50+ flag questions have been reviewed and corrected where mismatches exist"
       ],
       "file_operations": [
         {
           "path": "frontend/src/data/questions.ts",
           "operation": "modify",
-          "description": "Expand the flagQuestions array from 15 to at least 50 unique questions. Each question must include a Persian text question, an image URL referencing flag assets in frontend/public/assets/generated/ (using existing flags like frontend/public/assets/generated/flag-iran.dim_200x133.png and adding new country flags), 4 Persian answer options, and a correctAnswer index. Maintain the existing Question interface structure with all required fields."
-        }
-      ]
-    },
-    {
-      "id": "REQ-25",
-      "summary": "Expand sports question pool to 50+ questions with Persian options",
-      "acceptanceCriteria": [
-        "Sports question pool contains at least 50 unique questions",
-        "Each question has 4 Persian answer options",
-        "Correct answer index is properly mapped for each question"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/data/questions.ts",
-          "operation": "modify",
-          "description": "Expand the sportsQuestions array from 15 to at least 50 unique questions. Each question must include Persian text covering various sports topics (football, basketball, Olympics, etc.), 4 Persian answer options, and a correctAnswer index. Maintain the existing Question interface structure."
-        }
-      ]
-    },
-    {
-      "id": "REQ-26",
-      "summary": "Expand intelligence/math question pool to 50+ questions with Persian options",
-      "acceptanceCriteria": [
-        "Intelligence/math question pool contains at least 50 unique questions",
-        "Each question has 4 Persian answer options",
-        "Correct answer index is properly mapped for each question"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/data/questions.ts",
-          "operation": "modify",
-          "description": "Expand the intelligenceQuestions array from 18 to at least 50 unique questions. Each question must include Persian text covering logic puzzles, math problems, pattern recognition, and reasoning tasks, 4 Persian answer options, and a correctAnswer index. Maintain the existing Question interface structure."
-        }
-      ]
-    },
-    {
-      "id": "REQ-27",
-      "summary": "Expand science/technology question pool to 50+ questions with Persian options",
-      "acceptanceCriteria": [
-        "Science/technology question pool contains at least 50 unique questions",
-        "Each question has 4 Persian answer options",
-        "Correct answer index is properly mapped for each question"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/data/questions.ts",
-          "operation": "modify",
-          "description": "Expand the scienceQuestions array from 16 to at least 50 unique questions. Each question must include Persian text covering physics, chemistry, biology, technology, astronomy, and general science topics, 4 Persian answer options, and a correctAnswer index. Maintain the existing Question interface structure."
-        }
-      ]
-    },
-    {
-      "id": "REQ-28",
-      "summary": "Enhance randomization algorithm to prevent duplicate questions in same session and improve distribution",
-      "acceptanceCriteria": [
-        "Questions are selected using an improved randomization algorithm that provides better distribution",
-        "The same question does not appear twice within a single game session",
-        "Random selection provides good variety across multiple game sessions"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/hooks/useQuizGame.ts",
-          "operation": "modify",
-          "description": "Enhance the question selection logic to track used question indices per category within the current game session. Implement a Fisher-Yates shuffle or similar algorithm to pre-shuffle each category's question pool at game start, then select questions sequentially from the shuffled pool. Store used question indices in the game state to prevent duplicates within a single session (4 questions total). Ensure the randomization provides good variety by not using simple modulo or sequential selection patterns."
+          "description": "Review all entries in the flagQuestions array and verify that each question's correctAnswer index (0-3) points to the correct country name option that matches the flag image URL. For each flag question, cross-reference the image property (e.g., 'frontend/public/assets/generated/flag-iran.dim_200x133.png') with the options array to identify which index contains the correct country name (e.g., 'ایران'). Update the correctAnswer field for any questions where the index is incorrect. Maintain all existing Persian text, options order, and image URLs without modification."
         }
       ]
     }

@@ -1,15 +1,32 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-20T16:22:00.670Z",
-  "summary": "The implementation successfully addresses all requirements. The question pools for all four categories (flags, sports, intelligence/math, science/technology) have been expanded to 50+ questions each with Persian text and proper answer indices. The randomization algorithm in useQuizGame has been enhanced using Fisher-Yates shuffle with pre-shuffling at game start and tracking of used questions to prevent duplicates within a session.",
-  "missing_requirements": [],
+  "generatedAt": "2026-02-20T16:43:43.976Z",
+  "summary": "The implementation partially addresses the requirements but is incomplete. REQ-31 (frontend audit) shows evidence of corrections to flag questions in frontend/src/data/questions.ts with corrected correctAnswerIndex values and documentation. However, the diff is truncated showing only ~14 flag questions when 50+ were expected. REQ-32 (backend update) shows only 3 flag question mappings in backend/main.mo instead of the 50+ needed to align with the corrected frontend data.",
+  "missing_requirements": [
+    {
+      "id": "REQ-31",
+      "requirement": "All 50+ flag questions have been reviewed and corrected where mismatches exist",
+      "reason": "The diff shows only approximately 14 flag questions in the truncated frontend/src/data/questions.ts file. The BuildRequest specified 50+ flag questions should be reviewed and corrected, but the visible evidence shows far fewer questions.",
+      "evidence": [
+        "frontend/src/data/questions.ts"
+      ]
+    },
+    {
+      "id": "REQ-32",
+      "requirement": "Backend Map entries for flag questions match the corrected frontend correctAnswer values for all 50+ questions",
+      "reason": "The backend/main.mo file shows only 3 flag question mappings (indices 0, 1, 2) in the flagQuestions Map, while the BuildRequest and frontend indicate 50+ flag questions exist. The backend is missing mappings for the vast majority of flag questions.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
   "hallucinated_features": [],
-  "confidence": 0.95,
+  "confidence": 0.85,
   "changed_files": [
+    "backend/main.mo",
     "frontend-file-summaries.txt",
     "frontend/src/data/questions.ts",
-    "frontend/src/hooks/useQuizGame.ts",
     "project_state.json"
   ]
 }

@@ -1,18 +1,18 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-20T16:22:00.674Z",
+  "generatedAt": "2026-02-20T16:43:43.980Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 5,
-    "implemented": 5,
+    "total": 2,
+    "implemented": 1,
     "items": [
       {
-        "id": "REQ-24",
-        "summary": "Expand the question pool for country flags category to at least 50 unique questions with flag images and 4 multiple-choice options each in Persian",
+        "id": "REQ-31",
+        "summary": "Audit all country flag questions in frontend/src/data/questions.ts to verify that the correctAnswer index (0-3) points to the actual correct country name option in the options array for each flag question",
         "status": "implemented",
         "plannedFiles": [
           "frontend/src/data/questions.ts"
@@ -22,58 +22,21 @@
         ]
       },
       {
-        "id": "REQ-25",
-        "summary": "Expand the question pool for sports category to at least 50 unique questions with 4 multiple-choice options each in Persian",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/data/questions.ts"
-        ],
-        "matchedFiles": [
-          "frontend/src/data/questions.ts"
-        ]
-      },
-      {
-        "id": "REQ-26",
-        "summary": "Expand the question pool for intelligence/math category to at least 50 unique questions with 4 multiple-choice options each in Persian",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/data/questions.ts"
-        ],
-        "matchedFiles": [
-          "frontend/src/data/questions.ts"
-        ]
-      },
-      {
-        "id": "REQ-27",
-        "summary": "Expand the question pool for science/technology category to at least 50 unique questions with 4 multiple-choice options each in Persian",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/data/questions.ts"
-        ],
-        "matchedFiles": [
-          "frontend/src/data/questions.ts"
-        ]
-      },
-      {
-        "id": "REQ-28",
-        "summary": "Enhance the randomization algorithm in useQuizGame hook to ensure better distribution and variety when selecting questions from each category pool, preventing recently-shown questions from appearing again in the same game session",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/hooks/useQuizGame.ts"
-        ],
-        "matchedFiles": [
-          "frontend/src/hooks/useQuizGame.ts"
-        ]
+        "id": "REQ-32",
+        "summary": "Update the backend flagQuestions Map in backend/main.mo to ensure all question indices map to the correct answer indices that align with the corrected frontend question data",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
       }
     ]
   },
   "changedFiles": [
+    "backend/main.mo",
     "build-request.json",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
     "frontend/src/data/questions.ts",
-    "frontend/src/hooks/useQuizGame.ts",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

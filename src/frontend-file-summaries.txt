@@ -12,5 +12,5 @@
   "frontend/src/index.css": "Global styles with warm orange/yellow OKLCH color palette inspired by Middle Eastern market aesthetics for both light and dark modes.",
   "frontend/tailwind.config.js": "Tailwind configuration extending theme with custom warning color, bold font weights, and design tokens for the quiz interface.",
   "frontend/src/types/quiz.ts": "Type definitions for quiz game including Question interface, GameState union type, and GameOverReason interface with optional correctAnswer field to store the correct answer text when game over occurs.",
-  "frontend/src/data/questions.ts": "Expanded question pool with 50+ questions per category in Persian, covering flags (55 questions), sports (54 questions), intelligence/math (53 questions), and science (52 questions) with correct answer indices."
+  "frontend/src/data/questions.ts": "Comprehensive quiz question database with 50+ questions per category (flags, sports, intelligence, science) in Persian, with all flag question correctAnswerIndex values corrected to match the actual flag images shown in the imageUrl property."
 }

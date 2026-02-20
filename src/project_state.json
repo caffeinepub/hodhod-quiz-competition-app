@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 15,
+  "projectStateVersion": 19,
   "summary": "Quiz competition app for Hodhod store with 4 multiple-choice questions (country flags, sports, intelligence/math, science/technology), 12-second time limit per question, game over on wrong answer with correct answer displayed, randomized question selection",
   "architectural_notes": [
     "App branded for Hodhod store",
@@ -15,7 +15,7 @@
     "Random question selection from available question pools"
   ],
   "known_issues": [
-    "Incorrect question-answer mappings need verification and correction"
+    "All country flag question answers are incorrect and need urgent correction"
   ],
   "isFixRequest": true,
   "existing_features": [
@@ -176,6 +176,22 @@
       "title": "Enhance the randomization algorithm in useQuizGame hook to ensure better distribution and variety when selecting questions from each category pool, preventing recently-shown questions from appearing again in the same game session",
       "reqIds": [
         "REQ-28"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-cross-reference-frontend-question-data-in-frontend-src-data-questions-ts-with-backend-answer-keys-to-identify-and-document-all-mismatches-where-the-correctanswer-field-does-not-align-with-the-backend-map-entries",
+      "title": "Cross-reference frontend question data in frontend/src/data/questions.ts with backend answer keys to identify and document all mismatches where the correctAnswer field does not align with the backend Map entries",
+      "reqIds": [
+        "REQ-30"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-audit-all-country-flag-questions-in-frontend-src-data-questions-ts-to-verify-that-the-correctanswer-index-0-3-points-to-the-actual-correct-country-name-option-in-the-options-array-for-each-flag-question",
+      "title": "Audit all country flag questions in frontend/src/data/questions.ts to verify that the correctAnswer index (0-3) points to the actual correct country name option in the options array for each flag question",
+      "reqIds": [
+        "REQ-31"
       ],
       "version": 1
     }
@@ -369,6 +385,22 @@
       "id": "AR-31",
       "summary": "Significantly expand question pool with many more questions across all categories",
       "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-32",
+      "summary": "Audit and correct all answer mappings in the backend answer key stores (flagQuestions, sportsQuestions, intelligenceQuestions, scienceQuestions) in backend/main.mo to ensure each question index maps to the correct answer index that matches the actual correct option in the corresponding frontend question data",
+      "reqIds": [
+        "REQ-29"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-34",
+      "summary": "Update the backend flagQuestions Map in backend/main.mo to ensure all question indices map to the correct answer indices that align with the corrected frontend question data",
+      "reqIds": [
+        "REQ-32"
+      ],
       "status": "pending"
     }
   ],

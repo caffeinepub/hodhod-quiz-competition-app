@@ -3,9 +3,6 @@ import Map "mo:core/Map";
 import Array "mo:core/Array";
 import Iter "mo:core/Iter";
 
-
-// Correct answer mappings switched to Map indexed by question number
-
 actor {
   type Question = {
     questionText : Text;
@@ -14,8 +11,14 @@ actor {
     imageUrl : ?Text;
   };
 
+  // Corrected backend answer mappings for flags questions
+  // Correct answer index (0-3) corresponds to correct option
   let flagQuestions = Map.fromIter<Nat, Nat>(
-    [(0, 2), (1, 1), (2, 0)].values()
+    [
+      (0, 1), // Question 0, correct answer is 1 (Malaysia)
+      (1, 2), // Question 1, correct answer is 2 (India)
+      (2, 3), // Question 2, correct answer is 3 (China)
+    ].values()
   );
 
   let sportsQuestions = Map.fromIter<Nat, Nat>(

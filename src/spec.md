@@ -1,13 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Significantly expand the question pool across all four quiz categories and improve question randomization to provide greater variety and prevent repetition within game sessions.
+**Goal:** Fix incorrect answers for all country flag questions in the quiz game.
 
 **Planned changes:**
-- Expand country flags category question pool to at least 50 unique questions with flag images and 4 Persian multiple-choice options each
-- Expand sports category question pool to at least 50 unique questions with 4 Persian multiple-choice options each
-- Expand intelligence/math category question pool to at least 50 unique questions with 4 Persian multiple-choice options each
-- Expand science/technology category question pool to at least 50 unique questions with 4 Persian multiple-choice options each
-- Enhance randomization algorithm in useQuizGame hook to prevent the same question from appearing twice in a single game session and ensure better distribution across multiple sessions
+- Audit and correct the correctAnswer index for all flag questions in frontend/src/data/questions.ts to ensure it points to the actual correct country name
+- Update the backend flagQuestions Map in backend/main.mo to match the corrected answer indices from the frontend
 
-**User-visible outcome:** Players will experience much greater question variety with minimal repetition, as each category now has at least 50 questions and improved randomization ensures different questions appear across game sessions.
+**User-visible outcome:** All country flag questions will display the correct answer when users submit their responses, ensuring accurate scoring and feedback during gameplay.
